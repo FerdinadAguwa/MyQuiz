@@ -28,6 +28,29 @@
       cursor: pointer;
 
   }
+  .startBtn button:hover{
+        box-shadow: 0 o.4rem 1.4rem 0 black;
+        cursor: pointer;
+        transition: transform;
+        transform: scale(1.03);
+  }
+
+  /* HIGHSCORES section */
+
+  #highScoresBtn{
+      color: red;
+      position: absolute;
+      left: 90%;
+  }
+.fas{
+    color: yellow;
+    padding: 5px;
+    position: absolute;
+    left: 98%;
+}
+
+
+
   /* styling for infoBox */
   .infoBox
     {
@@ -52,7 +75,7 @@
     }
     .infoBox .infoList .info{
         margin: 5px 0;
-        font-size: 17px;
+        font-size: 19px;
     }
    #infoTime
    {
@@ -71,9 +94,78 @@
 
     }
 
+       
+
     .infoBox .buttons button{
         margin: 0 5px;
         height: 40px;
         width: 100px;
         border: 1px solid lightblue;
     }
+/* style for my timer  */
+.timeStyle{
+    
+    margin: 10px;
+    width: 163px;
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 75px;
+}
+/* Question styling */
+.container{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 540px;
+      height: 250px;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      box-shadow: black;
+      text-align: center;
+      padding: 10px;
+      background-color: seashell;
+}
+.buttonGrid{
+    margin: 35px;
+   
+}
+.btn{
+    margin-bottom: 6px;
+   background-color:#c9e2d8e0;
+   padding: 10px;
+   border-radius: 10px;
+}
+.btn:hover{
+    border-color: crimson;
+    background-color: white;
+}
+#hide{
+    display: none;
+}
+
+/* highscores page styling */
+#end{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    color:black
+}
+#savesScoresBtn{
+    align-items: center;
+
+}
+
+
+.choiceContainer{
+display:flex;
+width: 100%;
+border-radius: 4px;
+background-color: brown;
+font-size: 100x;
+min min-width: 80%;
+padding: 2px;
+margin: 4px;
+}
