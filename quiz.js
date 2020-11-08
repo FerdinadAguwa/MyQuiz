@@ -1,4 +1,3 @@
-//questions
   var timer;
   var timerInterval;
   var display;
@@ -12,7 +11,7 @@
   .addEventListener('click', startButtonClicked);
 
 
-
+// all my questions for the assignment
 
   var allQuestions = [
     {
@@ -37,7 +36,7 @@
     },
   ]
 
-//timer
+//timer//
 function startTimer(duration, display) {
     timer = duration;
     var minutes;
@@ -52,7 +51,7 @@ function startTimer(duration, display) {
       display.textContent = minutes + ':' + seconds;
   
       if (--timer < 0) {
-        // timer = duration;
+        
       }
     }, 1000)
   }
@@ -69,8 +68,9 @@ function startTimer(duration, display) {
   }
 
   function answerButtonClicked(i) {
-  //checks to see if button is correct
-  //if not correct deduct by 15 seconds
+  //checks for correct buttons or buttons
+
+  //deducts 10 seconds 
   if (this.value !== allQuestions[currentQuestionIndex].answer) {
     alert('Try again');
     timer -= 10;
@@ -87,8 +87,8 @@ function startTimer(duration, display) {
   function endGame() {
     clearInterval(timerInterval);
     console.log('game over');
-    //display results div
-    document.querySelector('#resultsDIV').style.display = 'block';
+    //display final div
+    document.querySelector('#finalDiv').style.display = 'block';
     //hide choices div
     document.querySelector('.container').style.display = 'none';
     //add score final
@@ -102,12 +102,12 @@ function startTimer(duration, display) {
     if (!currentQuestion) {
       return endGame();
     }
-  //changing question title from the one in html.. into the title of the array
+  //changing question titley
   document.querySelector('#questionText').textContent = currentQuestion.prompt;
   document.querySelector('#answerText').innerHTML = '';
   ul.innerHTML = '';
 
-//this is for when you click on button of answer choice to have a button
+// trvel through your array of questons 
 for (var i = 0; i< currentQuestion.choices.length; i++) {
   var li = document.createElement('li');
   var choiceButton = document.createElement('button');
