@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: fantasy;
 }
+#headStyle{
+    color:white;
+}
 
   body{
       background-color: cadetblue;
@@ -94,8 +97,6 @@
 
     }
 
-       
-
     .infoBox .buttons button{
         margin: 0 5px;
         height: 40px;
@@ -103,29 +104,13 @@
         border: 1px solid lightblue;
     }
 /* style for my timer  */
-.timeStyle{
-    
-    margin: 10px;
-    width: 163px;
-    position: absolute;
-    color: white;
-    text-align: center;
-    font-size: 75px;
-}
+
+
+
+
+
 /* Question styling */
-.container{
-    position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 540px;
-      height: 250px;
-      transform: translate(-50%, -50%);
-      border-radius: 10px;
-      box-shadow: black;
-      text-align: center;
-      padding: 10px;
-      background-color: seashell;
-}
+
 .buttonGrid{
     margin: 35px;
    
@@ -157,15 +142,45 @@
     align-items: center;
 
 }
+/* ___Page 2 Styling ______________________________________________________________ */
 
-
-.choiceContainer{
-display:flex;
-width: 100%;
+.quizSecton{
+    width: 100px;
 border-radius: 4px;
-background-color: brown;
 font-size: 100x;
-min min-width: 80%;
+min-width: 80%;
 padding: 2px;
 margin: 4px;
 }
+
+ #choices{
+     list-style: none;
+     font-size: 25px;
+      font-weight: 500;
+      color: red;
+      padding:15px 30px;
+      outline: none;
+      border-radius: 5px;
+      cursor: pointer;
+ }
+ #startButton{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 5px;
+    height: 40px;
+    width: 200px;
+    color: black;
+ }
+ .questionStyle{position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+ }
+
+ #answerText{
+     font-size: 120px;
+ }

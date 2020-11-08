@@ -11,13 +11,13 @@
 
 
 <body>
-
-    <!-- Start quiz button -->
-<div class="startBtn" id="startButton"><button>Start Quiz</button></div>
+<h1 id="headStyle">JavaScript Quiz Challenge</h1>
+    <!-- navigate through the quiz button -->
+<div class="startBtn" id="startButton"><button>Next</button></div>
 
 <!-- HighScores Button!!! -->
 <div id="home" class="flexcolumn">
-<a href="/highscores.html" id="highScoresBtn" class="Hbtn">HighScores<i class="fas fa-star-half-alt"></i></a>
+<a href="highscores.html" id="highScoresBtn" class="Hbtn">HighScores<i class="fas fa-star-half-alt"></i></a>
 </div>
 
 
@@ -35,60 +35,11 @@
             </div>
     </div>
     <div class="buttons">
-        <button class="continue" id="continueQuiz">Continue</button>
+        <a href="quiz.html"> <button class="continue" id="continueQuiz">Continue</button></a>
     </div>
 </div> 
 
 
-
-<!-- Timer timerBox information  -->
-<div class="timeStyle" id="timerBox"></div>
-
-<!-- section for all my questions  -->
-<div class="container" id="hide">
-        <div id="Quiz" class="justify-center flex column">
-            <div id="hud">
-                <div class="hud-item">
-                    <p id="progressText" class="hudPrefix">
-                       Question
-                    </p>
-                </div>
-                <div class="hud-item">
-                    <p id="progressText" class="hudPrefix">
-                       Score
-                    </p>
-                </div>
-            </div>
-            <!-- where i am putting all my questions context -->
-            <h1 id="quizQuestion">What is the answer to this Question</h1>
-                <div class="choiceContainer">
-                    <p class="choicePrefix">A. </p>
-                    <p class="choiceText" data-number="1">Choice</p>
-                </div>
-                <div class="choiceContainer">
-                    <p class="choicePrefix">B. </p>
-                    <p class="choiceText" data-number="2">Choice2</p>
-                </div>
-                <div class="choiceContainer">
-                    <p class="choicePrefix">C. </p>
-                    <p class="choiceText" data-number="3">Choice3</p>
-                </div>
-                <div class="choiceContainer">
-                    <p class="choicePrefix">D. </p>
-                    <p class="choiceText" data-number="4">Choice4</p>
-                </div>
-        </div>
-
-</div>
-
     <script src="./script.js"></script>
 </body>
 </html>
-
-<!-- 
-fuction myCustomFunction(item){
-    console.log(item)
-}
-
-pets.forEach(myCustomFunction); 
-may user fot my quessions-->
