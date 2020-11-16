@@ -90,7 +90,7 @@ function startTimer(duration, display) {
     //display final div
     document.querySelector('#finalDiv').style.display = 'block';
     //hide choices div
-    document.querySelector('.container').style.display = 'none';
+    document.querySelector('.quizSection').style.display = 'none';
     //add score final
     document.querySelector('#score').textContent = timer;
     document.querySelector('#time').textContent = timer;
@@ -139,7 +139,7 @@ document.querySelector('#submit').addEventListener('submit', function(event) {
 document.querySelector('#finalDiv').style.display = 'none';
 document.querySelector('#scoresDiv').style.display = 'none';
 
-document.querySelector('#seeHighScore').addEventListener('click, displayScores');
+document.querySelector('#seeHighScore').addEventListener('click', displayScores)
 function displayScores() {
   document.querySelector('#scoresDiv').style.display = 'block';
   Object.keys(localStorage).forEach(function (key) {
