@@ -122,8 +122,8 @@ for (var i = 0; i< currentQuestion.choices.length; i++) {
   }
 }
 
-var time = document.getElementById('timer');
-time.addEventListener('click, startButtonClicked');
+// var time = document.getElementById('timer');
+// time.addEventListener('click, startButtonClicked');
 
 
 
@@ -136,7 +136,7 @@ document.querySelector('#submit').addEventListener('submit', function(event) {
 });
 
 
-document.querySelector('#resultsDiv').style.display = 'none';
+document.querySelector('#finalDiv').style.display = 'none';
 document.querySelector('#scoresDiv').style.display = 'none';
 
 document.querySelector('#seeHighScore').addEventListener('click, displayScores');
