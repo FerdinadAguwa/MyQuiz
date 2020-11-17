@@ -90,7 +90,7 @@ function startTimer(duration, display) {
     //display final div
     document.querySelector('#finalDiv').style.display = 'block';
     //hide choices div
-    document.querySelector('.quizSection').style.display = 'none';
+    document.getElementById('#quizSection').style.display ='none';
     //add score final
     document.querySelector('#score').textContent = timer;
     document.querySelector('#time').textContent = timer;
@@ -151,8 +151,8 @@ li.textContent = key + '-' + localStorage.getItem(key);
 document.querySelector('#scoreslist').appendChild(li);
   });
 
-  document.querySelector('.container').style.display = 'none';
-  document.querySelector('#resultsDIV').style.display = 'none';
+  // document.querySelector('.container').style.display = 'none';
+  // document.querySelector('#resultsDIV').style.display = 'none';
 }
 
 
