@@ -9,18 +9,23 @@
 <body>
 <div class="container">
     <div id="end">
-        <h1 id="finalscore">0</h1>
-        <form class="endFormContainer">
+        <!-- <h1 id="finalscore">0</h1>
+        <form id="seeHighScore" class="endFormContainer">
             <h2 id="endText">Enter your Initials below to save your score!</h2>
             <input type="text" name="name" id="username"
             placeholder="Enter Your initials">
-            <button class="btn" id="savesScoreBtn" type="submit"
-            onclick="savesHighScore(event)"> Save</button>
-        </form>
+            <button class="btn" id="savesScoreBtn" type="submit"> Save</button>
+        </form> -->
+
+        <!-- Use CSS to initially hide we will display block once user submit initials-->
+        <div id="scoresDiv" style="display: none;">
+            <h1>HighScores</h1>
+            <ul id="scoreslist"></ul>
+         </div>
     
         <a href="index.html" class= "btn ">Go Back</a>
     </div>
  </div>
-   
+   <script src="./highscores.js"></script>
 </body>
 </html>

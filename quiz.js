@@ -11,6 +11,9 @@
   .addEventListener('click', startButtonClicked);
 
 
+document.querySelector('#finalDiv').style.display = 'none';
+
+
 // all my questions for the assignment
 
   var allQuestions = [
@@ -60,6 +63,8 @@ function startTimer(duration, display) {
 
 //start the time of event
   function startButtonClicked(i) {
+    // hide start quiz button
+    document.getElementById('quizSection').style.display ='none';
     var fiveMinutes = 60,
     display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
@@ -90,9 +95,9 @@ function startTimer(duration, display) {
     //display final div
     document.querySelector('#finalDiv').style.display = 'block';
     //hide choices div
-    document.getElementById('#quizSection').style.display ='none';
+    document.querySelector('.questionStyle').style.display ='none';
     //add score final
-    document.querySelector('#score').textContent = timer;
+    document.querySelector('#seeHighScore').textContent = timer;
     document.querySelector('#time').textContent = timer;
   }
 
@@ -125,37 +130,10 @@ for (var i = 0; i< currentQuestion.choices.length; i++) {
 // var time = document.getElementById('timer');
 // time.addEventListener('click, startButtonClicked');
 
-
-
 document.querySelector('#submit').addEventListener('submit', function(event) {
   event.preventDefault();
   var initials = document.querySelector('#initials').value;
   localStorage.setItem(initials, timer);
-  displayscores();
+  window.location.href = "highscores.html";
 
 });
-
-
-document.querySelector('#finalDiv').style.display = 'none';
-document.querySelector('#scoresDiv').style.display = 'none';
-
-document.querySelector('#seeHighScore').addEventListener('click', displayScores)
-function displayScores() {
-  document.querySelector('#scoresDiv').style.display = 'block';
-  Object.keys(localStorage).forEach(function (key) {
-    console.log(localStorage.getItem(key));
-  
-
-var li = document.createElement('li');
-li.textContent = key + '-' + localStorage.getItem(key);
-document.querySelector('#scoreslist').appendChild(li);
-  });
-
-  // document.querySelector('.container').style.display = 'none';
-  // document.querySelector('#resultsDIV').style.display = 'none';
-}
-
-
-
-
-
